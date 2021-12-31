@@ -1,1 +1,1 @@
-Đây là bài tập do Trường làm ở nhà 
+Đây là bài tập do Trường làm nhà
