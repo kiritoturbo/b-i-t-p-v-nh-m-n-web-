@@ -12,7 +12,9 @@ function clickbutton(){
         return false;
     }else{
         document.getElementById("message").style.color="green";
-        document.getElementById("message").innerHTML="bạn login thành công";
+        document.getElementById("message").innerHTML='<div style="border :1px solid blue;background-color: black;width:20px;height:30px"></div>';
     }
 
 }
+var myDiv =document.getElementById("myDIV").classList.add("mystyle", "anotherClass", "thirdClass");
+console.log(myDiv);
