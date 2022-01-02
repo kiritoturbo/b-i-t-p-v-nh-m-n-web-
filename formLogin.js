@@ -16,5 +16,3 @@ function clickbutton(){
     }
 
 }
-var myDiv =document.getElementById("myDIV").classList.add("mystyle", "anotherClass", "thirdClass");
-console.log(myDiv);
