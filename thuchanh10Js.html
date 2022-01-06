@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .change {
+            background-color: red;
+            width: 400px;
+            height: 400px;
+            animation: changeColor 20s;
+        }
+
+        @keyframes changeColor {
+            from {
+                background-color: red;
+            }
+
+            to {
+                background-color: blue;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sử dụng interval, classList toggle để tạo một hình vuông nhấp nháy chuyển từ
+    màu đỏ sang màu xanh. -->
+    <div id="hinhvuong"></div>
+
+    <script>
+        setInterval(function () { //hàm này thực hiện mãi mãi 
+            // alert("Chào mừng bạn đến với freetuts.net");
+            const mydiv = document.getElementById("hinhvuong");
+            mydiv.classList.toggle('change');
+        }, 11000);
+    </script>
+</body>
+
+</html>

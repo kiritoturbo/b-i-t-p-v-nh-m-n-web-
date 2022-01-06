@@ -11,6 +11,7 @@
 
 <body>
     <div id="div">number one </div>
+    <div id="myDiv"></div>
     <button onclick="demo();">click</button>
     <button onclick="demo1();">click1</button>
     <hr>
@@ -51,6 +52,24 @@
 
 
         // `;
+    </script>
+    <script>
+        const myDiv = document.getElementById('myDiv');
+        //add classList :thêm các class cho element
+        myDiv.classList.add("mystyle", "anotherClass", "thirdClass");
+        console.log(myDiv);
+
+
+        //contains:trả về đúng sai
+        console.log(myDiv.classList.contains('mystyle'));
+        //remove
+        myDiv.classList.remove("anotherClass");
+        console.log(myDiv);
+        //item::đưa ra chỉ số vị trí
+        console.log(myDiv.classList.item(1));
+        //toogle :
+        myDiv.classList.toggle('demo');
+        console.log(myDiv);
     </script>
 </body>
 
