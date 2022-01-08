@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <input type="text" id="btn">
+    <script>
+        // var a;
+        // var b;
+        // 4
+        // var btn = document.getElementById('btn');
+        // //thêm sự kiện cho đối tượng 
+        // btn.addEventListener('click', function () {
+        //     child_function(a, b);
+        // });
+
+        // function child_function(a, b) {
+        //     a = prompt('mời nhập a:');
+        //     b = prompt('mời nhập b:');
+        //     alert(parseInt(a) + parseInt(b));
+        // }
+        </script> -->
+    <!-- // Thực hành 16.
+//  Xây dựng một ứng dụng khi di chuyển chuột thì sẽ xuất hiện một dãy số ngẫu nhiên, nếu người
+// dùng click vào button Stop Random thì sẽ dừng random dãy số đó
+//  Các hàm sử dụng: mouseMove, addEventListener(), Math.Round, removeEventListener() -->
+
+    <div id="random" style="text-align: center;font-size: 50px;color: blue;height: 100vh;width: 100vw;">
+        <p>Di chuột vào đây</p>
+        <button onclick="stop();">Stop random</button>
+
+    </div>
+    <script>
+        var random = document.getElementById('random');
+        random.addEventListener('mousemove', function st() {
+            rdom();
+        });
+
+        function rdom() {
+            random.innerText = `Random number :${Math.round(Math.random()*10)}`;
+
+            // A number representing a number from 0 up to but not including 1.
+        }
+
+        function stopp() {
+            document.removeEventListener("mousemove", rdom);
+        }
+    </script>
+
+
+
+
+
+
+
+
+    <!-- <p>This document has an onmousemove event handler that displays a random number every time you move your mouse in this document.</p>
+
+<p>Click the button to remove the event handler.</p>
+
+<button onclick="removeHandler()">Try it</button>
+
+<p><strong>Note:</strong> The addEventListener() and removeEventListener() methods are not supported in Internet Explorer 8 and earlier versions.</p>
+
+<p id="demo"></p>
+
+<script>
+document.addEventListener("mousemove", myFunction);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = Math.random();
+}
+
+function removeHandler() {
+  document.removeEventListener("mousemove", myFunction);
+}
+</script> -->
+</body>
+
+
+</html>

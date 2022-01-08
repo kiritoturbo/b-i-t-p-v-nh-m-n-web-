@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+            min-width: 150px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- viết chương trình tính tổng của hai số nhập vào(tính tự động) -->
+    <div class="main1">
+        <label for="sothunhat " class="minnho">Nhập số thứ nhất :</label>
+        <input type="text" id="sothunhat" onkeyup="change();">
+    </div>
+    <div class="main2">
+        <label for="sothuhai " class="minnho">Nhập vào số thứ hai:</label>
+        <input type="text" id="sothuhai" onkeyup="change();">
+    </div>
+    <div class="ketqua">
+        <label for="ketqua " class="minnho">Kết quả:</label>
+        <input type="text" id="message">
+    </div>
+
+    <script>
+        function change() {
+            var sothu1 = document.getElementById('sothunhat').value;
+            var sothu2 = document.getElementById('sothuhai').value;
+            var count;
+            count = parseInt(sothu1) + parseInt(sothu2);
+            document.getElementById('message').value = count;
+        }
+    </script>
+</body>
+
+</html>
