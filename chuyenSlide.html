@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .image {
+            margin: 0 200px;
+            animation: change 3s ease-in;
+            border: 3px solid black;
+            border-radius: 10px;
+        }
+
+        @keyframes change {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0.7;
+            }
+        }
+
+        .image img {
+            width: 900px;
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image">
+        <img src="https://topshare.vn/wp-content/uploads/2020/06/anh-dep-3d-thien-nhien-doi-nui.jpg" alt="" id="img"
+            onclick="changeImage()">
+    </div>
+    <script>
+        var index = 1;
+
+        var changeImage = function () {
+            var imgs = [
+                'https://th.bing.com/th/id/R.216d6b320b34fdd52c0f7aa204c03412?rik=46HOM2DjpfP0EQ&pid=ImgRaw&r=0',
+                'https://www.chapter3d.com/wp-content/uploads/2020/08/anh-chan-dung.jpg',
+                'https://th.bing.com/th/id/OIP.vvxIa7TX3dN6RHzhStTwywHaJH?pid=ImgDet&rs=1'
+            ]
+            document.getElementById('img').src = imgs[index];
+            index++;
+            console.log(index);
+            if (index == 3) {
+                index = 0;
+            }
+        }
+        setInterval(changeImage, 2000);
+    </script>
+</body>
+
+</html>
